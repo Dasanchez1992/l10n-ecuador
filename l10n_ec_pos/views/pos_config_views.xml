@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="pos_config_view_form_l10n_ec" model="ir.ui.view">
+        <field name="name">pos.config.form.l10n_ec</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_settings_container')][last()]" position="after">
+                <h2>Ecuador</h2>
+                <div class="row mt16 o_settings_container">
+                    <setting
+                        string="Factura por defecto"
+                        help="Marcar automáticamente la opción de factura en cada venta">
+                        <field name="l10n_ec_default_invoice"/>
+                    </setting>
+                    <setting
+                        string="Auto descargar PDF"
+                        help="Descargar automáticamente el PDF al validar (no recomendado para Ecuador)">
+                        <field name="l10n_ec_auto_download_invoice"/>
+                    </setting>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
